@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 266
-  Top = 207
+  Left = 303
+  Top = 280
   Width = 563
   Height = 288
-  Caption = 'Form1'
+  Caption = 'Abrir Internet'
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -848,7 +848,7 @@ object Form1: TForm1
     Width = 193
     Height = 21
     Color = 16744448
-    DataField = 'NUMEROS'
+    DataField = 'N_ALEATORIO'
     DataSource = DataSource1
     TabOrder = 1
     InsideHelpText = 'Contrase'#241'a'
@@ -860,11 +860,11 @@ object Form1: TForm1
     InsideHelpFont.Style = []
   end
   object Button1: TButton
-    Left = 248
+    Left = 240
     Top = 184
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Mostrar Clave'
     TabOrder = 2
     OnClick = Button1Click
   end
@@ -872,11 +872,18 @@ object Form1: TForm1
     Left = 184
     Top = 72
     Width = 185
-    Height = 21
+    Height = 28
     Color = 16744448
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    PasswordChar = '*'
     TabOrder = 3
   end
-  object SQLConnection1: TSQLConnection
+  object Conexion: TSQLConnection
     ConnectionName = 'IBConnection'
     DriverName = 'Interbase'
     GetDriverFunc = 'getSQLDriverINTERBASE'
@@ -884,7 +891,7 @@ object Form1: TForm1
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=D:\Isael Data\DATA.fdb'
+      'Database=10.0.0.15:D:\Easy System News\DATA.FDB'
       'RoleName=RoleName'
       'User_Name=SYSDBA'
       'Password=juan173mateo69'
@@ -904,17 +911,34 @@ object Form1: TForm1
   end
   object SimpleDataSet1: TSimpleDataSet
     Aggregates = <>
-    Connection = SQLConnection1
-    DataSet.CommandText = 'select first 1 NUMEROS  from aleatorio order by rand ()'
+    Connection = Conexion
+    DataSet.CommandText = 'select N_ALEATORIO from SEC_ALEATORIO'
+    DataSet.DataSource = DataSource1
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
     Left = 96
     Top = 16
+    object SimpleDataSet1N_ALEATORIO: TIntegerField
+      FieldName = 'N_ALEATORIO'
+    end
   end
   object DataSource1: TDataSource
     DataSet = SimpleDataSet1
     Left = 136
     Top = 16
+  end
+  object SimpleDataSet2: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conexion
+    DataSet.CommandText = 'select first 1 NUMEROS  from aleatorio order by rand ()'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 192
+    Top = 16
+    object SimpleDataSet2NUMEROS: TIntegerField
+      FieldName = 'NUMEROS'
+    end
   end
 end
