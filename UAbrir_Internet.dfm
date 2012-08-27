@@ -842,23 +842,6 @@ object Form1: TForm1
     TabOrder = 0
     OnClick = btOkClick
   end
-  object EditInsideHelp2: TEditInsideHelp
-    Left = 184
-    Top = 152
-    Width = 193
-    Height = 21
-    Color = 16744448
-    DataField = 'N_ALEATORIO'
-    DataSource = DataSource1
-    TabOrder = 1
-    InsideHelpText = 'Contrase'#241'a'
-    InsideHelpActive = True
-    InsideHelpFont.Charset = DEFAULT_CHARSET
-    InsideHelpFont.Color = 16119285
-    InsideHelpFont.Height = -11
-    InsideHelpFont.Name = 'Arial'
-    InsideHelpFont.Style = []
-  end
   object Button1: TButton
     Left = 240
     Top = 184
@@ -881,7 +864,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     PasswordChar = '*'
-    TabOrder = 3
+    TabOrder = 1
   end
   object Conexion: TSQLConnection
     ConnectionName = 'IBConnection'
