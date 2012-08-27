@@ -866,6 +866,14 @@ object Form1: TForm1
     PasswordChar = '*'
     TabOrder = 1
   end
+  object Edit2: TEdit
+    Left = 216
+    Top = 152
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'Edit2'
+  end
   object Conexion: TSQLConnection
     ConnectionName = 'IBConnection'
     DriverName = 'Interbase'

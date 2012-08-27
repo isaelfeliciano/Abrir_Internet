@@ -38,8 +38,6 @@ var
   const
   clFocused = TColor($00FF8000);
 
-
-
 implementation
 
 {$R *.dfm}

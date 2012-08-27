@@ -14,12 +14,12 @@ type
     Conexion: TSQLConnection;
     SimpleDataSet1: TSimpleDataSet;
     DataSource1: TDataSource;
-    EditInsideHelp2: TEditInsideHelp;
     Button1: TButton;
     Edit1: TEdit;
     SimpleDataSet1N_ALEATORIO: TIntegerField;
     SimpleDataSet2: TSimpleDataSet;
     SimpleDataSet2NUMEROS: TIntegerField;
+    Edit2: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure btOkClick(Sender: TObject);
@@ -51,7 +51,7 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 SimpleDataSet1.Open;
-EditInsideHelp2.Text:= SimpleDataSet1N_ALEATORIO.AsString;
+Edit2.Text:= SimpleDataSet1N_ALEATORIO.AsString;
 
 end;
 
