@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 303
-  Top = 280
+  Left = 261
+  Top = 206
   Width = 563
   Height = 288
   Caption = 'Abrir Internet'
@@ -872,7 +872,6 @@ object Form1: TForm1
     Width = 121
     Height = 21
     TabOrder = 3
-    Text = 'Edit2'
   end
   object Conexion: TSQLConnection
     ConnectionName = 'IBConnection'

@@ -52,7 +52,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
 SimpleDataSet1.Open;
 Edit2.Text:= SimpleDataSet1N_ALEATORIO.AsString;
-
+SimpleDataSet1.Close;
 end;
 
 
